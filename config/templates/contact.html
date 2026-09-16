@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سلطان ترید</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(255, 212, 90, 0.08),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #080808 0%,
+                    #151515 50%,
+                    #050505 100%
+                );
+
+            color: #ffffff;
+
+            font-family:
+                "Segoe UI",
+                Tahoma,
+                Arial,
+                sans-serif;
+        }
+
+        .loading-box {
+            text-align: center;
+            padding: 40px 50px;
+
+            border: 1px solid rgba(255, 212, 90, 0.35);
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, 0.04);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 0 40px rgba(0, 0, 0, 0.5),
+                0 0 25px rgba(255, 212, 90, 0.08);
+        }
+
+        .loading-title {
+            margin: 0;
+
+            color: #ffd45a;
+
+            font-size: 24px;
+            font-weight: 800;
+
+            letter-spacing: 0.5px;
+        }
+
+        .loading-text {
+            margin: 18px 0 0;
+
+            color: #eeeeee;
+
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .dots {
+            display: inline-block;
+            width: 24px;
+            text-align: right;
+        }
+
+        @media (max-width: 600px) {
+
+            .loading-box {
+                width: 90%;
+                padding: 30px 20px;
+            }
+
+            .loading-title {
+                font-size: 20px;
+            }
+
+            .loading-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loading-box">
+
+        <h1 class="loading-title">
+            سلطان ترید
+        </h1>
+
+        <p class="loading-text">
+            این صفحه در حال بارگزاری است<span class="dots">...</span>
+        </p>
+
+    </div>
+
+</body>
+</html>

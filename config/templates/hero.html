@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>سلطان ترید</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            background: #050505;
+        }
+
+
+        body {
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+           منوی بالای سایت
+        ========================================= */
+
+        .top-menu {
+            width: 100%;
+
+            min-height: 64px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 10px 20px;
+
+            background: rgba(20, 20, 20, 0.55);
+
+            border-bottom: 1px solid rgba(255, 212, 90, 0.55);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 5px 25px rgba(0, 0, 0, 0.45),
+                inset 0 0 20px rgba(255, 255, 255, 0.04);
+
+            direction: rtl;
+
+            position: relative;
+
+            z-index: 9999;
+        }
+
+
+        .top-menu a {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 105px;
+
+            height: 38px;
+
+            padding: 0 14px;
+
+            border-radius: 9px;
+
+            color: #f5f5f5;
+
+            font-family:
+                "Segoe UI",
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            white-space: nowrap;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        .top-menu a:hover {
+            background: rgba(255, 212, 90, 0.18);
+
+            color: #ffd45a;
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =========================================
+           تصویر اول - بالای سایت
+        ========================================= */
+
+        .hero {
+            width: 100%;
+
+            overflow: hidden;
+        }
+
+
+        .hero img {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+        }
+
+
+        /* =========================================
+           بخش سه کادر
+        ========================================= */
+
+        .three-sections {
+            position: relative;
+
+            width: 100%;
+
+            line-height: 0;
+        }
+
+
+        .three-sections-image {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+        }
+
+
+        /* =========================================
+           استایل مشترک دکمه‌ها
+        ========================================= */
+
+        .section-button {
+            position: absolute;
+
+            transform: translate(-50%, -50%);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 170px;
+
+            height: 46px;
+
+            padding: 0 24px;
+
+            border: 1px solid #d9a52e;
+
+            border-radius: 8px;
+
+            background: linear-gradient(
+                180deg,
+                #f4c34b 0%,
+                #d99d22 100%
+            );
+
+            color: #111;
+
+            font-family:
+                "Segoe UI",
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.2px;
+
+            text-decoration: none;
+
+            line-height: normal;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.45);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+.section-button:hover {
+            transform:
+                translate(-50%, -50%)
+                scale(1.04);
+
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.65);
+        }
+
+
+        /* =========================================
+           دکمه تحلیل‌ها
+        ========================================= */
+
+        .analysis-button {
+            left: 25%;
+
+            top: calc(39% + 45px);
+        }
+
+
+        /* =========================================
+           دکمه سیگنال‌ها
+        ========================================= */
+
+        .signals-button {
+            left: 75%;
+
+            top: calc(39% + 45px);
+        }
+
+
+        /* =========================================
+           دکمه رضایت دانشجویان
+        ========================================= */
+
+        .students-button {
+            left: 50%;
+
+            top: calc(76% + 95px);
+
+            min-width: 200px;
+
+            height: 35px;
+
+            padding: 0 30px;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           بخش دوره‌ها و اپلیکیشن
+        ========================================= */
+
+        .feature-section {
+            width: 100%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 35px;
+
+            padding: 0px 5% 10px;
+
+            background: #050505;
+
+            direction: ltr;
+        }
+
+
+        /* =========================================
+           کادر تصاویر
+        ========================================= */
+
+        .feature-card {
+            position: relative;
+
+            width: calc(50% - 18px);
+
+            padding: 3px;
+
+            border-radius: 18px;
+
+            background: linear-gradient(
+                135deg,
+                #8a5a00 0%,
+                #ffd45a 25%,
+                #fff0a0 50%,
+                #d99b20 75%,
+                #6f4300 100%
+            );
+
+            box-shadow:
+                0 0 12px rgba(255, 190, 40, 0.55),
+                0 0 30px rgba(255, 170, 20, 0.25);
+
+            overflow: hidden;
+        }
+
+
+        /* =========================================
+           تصویر موبایل - تنظیم موقعیت
+        ========================================= */
+
+        .feature-card:nth-child(2) {
+            transform: translateX(27px);
+
+            position: relative;
+
+            left: 0px;
+        }
+
+
+        /* =========================================
+           بزرگ‌تر شدن تصویر شیر و مانیتورها
+        ========================================= */
+
+        .feature-card:first-child {
+            transform: scale(1.12);
+        }
+
+
+        /* =========================================
+           تصاویر
+        ========================================= */
+
+        .feature-card img {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+            border-radius: 15px;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================================
+           دکمه مشاهده جزئیات دوره‌ها
+        ========================================= */
+
+        .courses-button {
+            position: absolute;
+
+            left: calc(50% + 180px);
+
+            bottom: 35px;
+
+            transform: translateX(-50%);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 165px;
+
+            height: 42px;
+
+            padding: 0 18px;
+
+            border: 1px solid #ffd45a;
+
+            border-radius: 9px;
+
+            background: linear-gradient(
+                180deg,
+                #ffd75a 0%,
+                #e2a92b 100%
+            );
+
+            color: #111;
+
+            font-family:
+                "Segoe UI",
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.2px;
+
+            text-decoration: none;
+
+            line-height: normal;
+
+box-shadow:
+                0 0 10px rgba(255, 200, 60, 0.8),
+                0 0 25px rgba(255, 170, 20, 0.35);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .courses-button:hover {
+            transform:
+                translateX(-50%)
+                scale(1.04);
+
+            box-shadow:
+                0 0 15px rgba(255, 210, 70, 0.95),
+                0 0 35px rgba(255, 180, 20, 0.5);
+        }
+
+
+        /* =========================================
+           آخرین تصویر سایت
+        ========================================= */
+
+        .bottom-banner {
+            width: 96%;
+
+            height: 250px;
+
+            margin: 0px auto 0;
+
+            padding: 3px;
+
+            background: linear-gradient(
+                135deg,
+                #8a5a00 0%,
+                #ffd45a 25%,
+                #fff0a0 50%,
+                #d99b20 75%,
+                #6f4300 100%
+            );
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 0 12px rgba(255, 190, 40, 0.55),
+                0 0 30px rgba(255, 170, 20, 0.25);
+        }
+
+
+        .bottom-banner img {
+            display: block;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            border-radius: 18px;
+        }
+
+
+        /* =========================================
+           فضای انتهایی
+        ========================================= */
+
+        .next-sections {
+            width: 100%;
+
+            min-height: 0;
+
+            background: #050505;
+        }
+
+
+        /* =========================================
+           موبایل
+        ========================================= */
+
+        @media (max-width: 700px) {
+
+            /* منوی بالایی */
+
+            .top-menu {
+                width: 100%;
+
+                min-height: 58px;
+
+                gap: 3px;
+
+                padding: 6px 5px;
+
+                overflow-x: auto;
+
+                justify-content: flex-start;
+            }
+
+
+            .top-menu a {
+                min-width: auto;
+
+                height: 32px;
+
+                padding: 0 9px;
+
+                font-size: 9px;
+            }
+
+
+            .section-button {
+                min-width: 125px;
+
+                height: 34px;
+
+                padding: 0 12px;
+
+                font-size: 10px;
+
+                border-radius: 6px;
+            }
+
+
+            .students-button {
+                min-width: 115px;
+
+                height: 32px;
+
+                padding: 0 10px;
+
+                font-size: 10px;
+            }
+
+
+            .feature-section {
+                flex-direction: column;
+
+                gap: 25px;
+
+                padding: 30px 5% 50px;
+            }
+
+
+            .feature-card {
+                width: 100%;
+            }
+
+
+            /* =====================================
+               شیر در موبایل
+            ===================================== */
+
+            .feature-card:first-child {
+                width: 100%;
+
+                transform: scale(1.50);
+            }
+
+
+            /* =====================================
+               موبایل در موبایل
+            ===================================== */
+
+            .feature-card:nth-child(2) {
+                width: 100%;
+
+                transform: translateX(0);
+
+                left: 0;
+            }
+
+
+            /* =====================================
+               دکمه دوره‌ها در موبایل
+            ===================================== */
+
+            .courses-button {
+                left: calc(50% + 30px);
+
+                min-width: 145px;
+
+                height: 38px;
+
+                padding: 0 14px;
+
+                font-size: 11px;
+
+                bottom: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         منوی بالای سایت
+    ========================================== -->
+
+    <nav class="top-menu">
+
+<a href="/hero/">صفحه اصلی</a>
+
+        <a href="/analysis/">نتایج تحلیل ها</a>
+
+        <a href="/signals/">نتایج سیگنال ها</a>
+
+        <a href="/students/">رضایت دانشجویان</a>
+
+        <a href="/courses/">دوره های آموزشی</a>
+
+        <a href="/contact/">ارتباط با ما</a>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         تصویر اصلی بالای سایت
+    ========================================== -->
+
+    <section class="hero">
+
+        <img
+            src="/hero-image.jpg"
+            alt="سلطان ترید"
+        >
+
+    </section>
+
+
+
+    <!-- =========================================
+         تصویر سه کادر + سه دکمه
+    ========================================== -->
+
+    <section class="three-sections">
+
+        <img
+            class="three-sections-image"
+            src="/sections-image.jpg"
+            alt="تحلیل ها، سیگنال ها و رضایت دانشجویان"
+        >
+
+
+        <a
+            href="/analysis/"
+            class="section-button analysis-button"
+        >
+            مشاهده تمامی تحلیل‌ها
+        </a>
+
+
+        <a
+            href="/signals/"
+            class="section-button signals-button"
+        >
+            مشاهده تمامی سیگنال‌ها
+        </a>
+
+
+        <a
+            href="/students/"
+            class="section-button students-button"
+        >
+            مشاهده رضایت دانشجویان
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================================
+         بخش دوره‌ها و اپلیکیشن
+    ========================================== -->
+
+    <section class="feature-section">
+
+
+        <!-- تصویر شیر و مانیتورها -->
+
+        <div class="feature-card">
+
+            <img
+                src="/courses-image.jpg"
+                alt="دوره های سلطان ترید"
+            >
+
+
+            <a
+                href="/courses/"
+                class="courses-button"
+            >
+                مشاهده جزئیات دوره‌ها
+            </a>
+
+        </div>
+
+
+
+        <!-- تصویر اپلیکیشن -->
+
+        <div class="feature-card">
+
+            <img
+                src="/app-image.jpg"
+                alt="اپلیکیشن سلطان ترید"
+            >
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         آخرین تصویر سایت
+    ========================================== -->
+
+    <section class="bottom-banner">
+
+        <img
+            src="/bottom-banner.png"
+            alt="سلطان ترید - انتخاب حرفه ای ها"
+        >
+
+    </section>
+
+
+
+    <!-- =========================================
+         پایان سایت
+    ========================================== -->
+
+    <section class="next-sections"></section>
+
+
+</body>
+
+</html>
