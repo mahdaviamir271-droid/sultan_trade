@@ -2,8 +2,13 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
 from django.http import FileResponse
+from django.shortcuts import redirect
 from pathlib import Path
 from django.conf import settings
+
+
+def home(request):
+    return redirect("/hero/")
 
 
 def hero_image(request):
@@ -47,17 +52,16 @@ def bottom_banner(request):
 
 
 urlpatterns = [
+    path("", home, name="home"),
 
     path("admin/", admin.site.urls),
 
-    # صفحه اصلی
     path(
         "hero/",
         TemplateView.as_view(template_name="hero.html"),
         name="hero",
     ),
 
-    # صفحات اصلی سایت
     path(
         "analysis/",
         TemplateView.as_view(template_name="analysis.html"),
@@ -88,7 +92,6 @@ urlpatterns = [
         name="contact",
     ),
 
-    # تصاویر
     path(
         "hero-image.jpg",
         hero_image,
